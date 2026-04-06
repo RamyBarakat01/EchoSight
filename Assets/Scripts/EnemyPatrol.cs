@@ -18,6 +18,7 @@ public class EnemyPatrol : MonoBehaviour
     private Transform targetPoint;
     private Transform player;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     private bool isChasing = false;
     private bool isAttacking = false;
@@ -26,6 +27,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         targetPoint = pointB;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -40,20 +42,17 @@ public class EnemyPatrol : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Start chasing
         if (!isChasing && distanceToPlayer <= detectionRange)
         {
             isChasing = true;
         }
 
-        // Stop chasing if player is too far
         if (isChasing && distanceToPlayer > losePlayerRange)
         {
             isChasing = false;
             isAttacking = false;
         }
 
-        // Attack if close enough
         if (isChasing && distanceToPlayer <= attackRange)
         {
             isAttacking = true;
@@ -66,15 +65,17 @@ public class EnemyPatrol : MonoBehaviour
         if (isAttacking)
         {
             FacePlayer();
-            // Stay in place while attacking
+            SetAnimatorState(0, true); // idle movement + attacking
         }
         else if (isChasing)
         {
             ChasePlayer();
+            SetAnimatorState(2, false); // run
         }
         else
         {
             Patrol();
+            SetAnimatorState(1, false); // walk
         }
     }
 
@@ -89,12 +90,16 @@ public class EnemyPatrol : MonoBehaviour
         if (Vector2.Distance(transform.position, pointA.position) < 0.1f)
         {
             targetPoint = pointB;
-            if (spriteRenderer != null) spriteRenderer.flipX = false;
+
+            // Reversed because this sprite faces the opposite default direction
+            if (spriteRenderer != null) spriteRenderer.flipX = true;
         }
         else if (Vector2.Distance(transform.position, pointB.position) < 0.1f)
         {
             targetPoint = pointA;
-            if (spriteRenderer != null) spriteRenderer.flipX = true;
+
+            // Reversed because this sprite faces the opposite default direction
+            if (spriteRenderer != null) spriteRenderer.flipX = false;
         }
     }
 
@@ -113,10 +118,20 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (spriteRenderer != null)
         {
+            // Reversed because this sprite faces the opposite default direction
             if (player.position.x < transform.position.x)
-                spriteRenderer.flipX = true;
-            else if (player.position.x > transform.position.x)
                 spriteRenderer.flipX = false;
+            else if (player.position.x > transform.position.x)
+                spriteRenderer.flipX = true;
+        }
+    }
+
+    void SetAnimatorState(int moveState, bool attacking)
+    {
+        if (animator != null)
+        {
+            animator.SetInteger("MoveState", moveState);
+            animator.SetBool("IsAttacking", attacking);
         }
     }
 
