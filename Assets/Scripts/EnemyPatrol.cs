@@ -15,6 +15,12 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Attack")]
     public float attackRange = 1.2f;
 
+    [Header("Sprite Facing")]
+    public bool spriteFacesRightByDefault = true;
+
+    [Header("Animation")]
+    public bool useRunForChase = true;
+
     private Transform targetPoint;
     private Transform player;
     private SpriteRenderer spriteRenderer;
@@ -65,17 +71,21 @@ public class EnemyPatrol : MonoBehaviour
         if (isAttacking)
         {
             FacePlayer();
-            SetAnimatorState(0, true); // idle movement + attacking
+            SetAnimatorState(0, true);   // idle + attacking
         }
         else if (isChasing)
         {
             ChasePlayer();
-            SetAnimatorState(2, false); // run
+
+            if (useRunForChase)
+                SetAnimatorState(2, false);   // run
+            else
+                SetAnimatorState(1, false);   // walk
         }
         else
         {
             Patrol();
-            SetAnimatorState(1, false); // walk
+            SetAnimatorState(1, false);       // walk
         }
     }
 
@@ -90,16 +100,12 @@ public class EnemyPatrol : MonoBehaviour
         if (Vector2.Distance(transform.position, pointA.position) < 0.1f)
         {
             targetPoint = pointB;
-
-            // Reversed because this sprite faces the opposite default direction
-            if (spriteRenderer != null) spriteRenderer.flipX = true;
+            SetFacing(true);   // moving right
         }
         else if (Vector2.Distance(transform.position, pointB.position) < 0.1f)
         {
             targetPoint = pointA;
-
-            // Reversed because this sprite faces the opposite default direction
-            if (spriteRenderer != null) spriteRenderer.flipX = false;
+            SetFacing(false);  // moving left
         }
     }
 
@@ -116,13 +122,23 @@ public class EnemyPatrol : MonoBehaviour
 
     void FacePlayer()
     {
-        if (spriteRenderer != null)
+        if (player.position.x > transform.position.x)
+            SetFacing(true);
+        else if (player.position.x < transform.position.x)
+            SetFacing(false);
+    }
+
+    void SetFacing(bool movingRight)
+    {
+        if (spriteRenderer == null) return;
+
+        if (spriteFacesRightByDefault)
         {
-            // Reversed because this sprite faces the opposite default direction
-            if (player.position.x < transform.position.x)
-                spriteRenderer.flipX = false;
-            else if (player.position.x > transform.position.x)
-                spriteRenderer.flipX = true;
+            spriteRenderer.flipX = !movingRight;
+        }
+        else
+        {
+            spriteRenderer.flipX = movingRight;
         }
     }
 
