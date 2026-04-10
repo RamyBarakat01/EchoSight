@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dell" at "2026-04-06T19:04:44.3186614Z"
 Built from '6000.3/staging' branch; Version is '6000.3.9f1 (7a9955a4f2fa) revision 8034645'; Using compiler version '194234433'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 24365 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dell" at "2026-04-09T07:17:05.281741Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32557 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-04-06T19:04:44Z
+Date: 2026-04-09T07:17:05Z
 
 COMMAND LINE ARGUMENTS:
 D:\Unity\6000.3.9f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ D:/2D Game project
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-49673
+54449
 -licensingIpc
 LicenseClient-dell
 -job-worker-count
@@ -67,12 +67,12 @@ D:/2D Game project
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
-Player connection [18544]  Target information:
+Player connection [5288]  Target information:
 
-Player connection [18544]  * "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 2184102631 [EditorId] 2184102631 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-73FRC69) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5288]  * "[IP] 10.1.80.124 [Port] 0 [Flags] 2 [Guid] 1880993120 [EditorId] 1880993120 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-73FRC69) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [18544] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [18544] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5288] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5288] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -84,7 +84,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 7.67 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.66 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.3.9f1 (7a9955a4f2fa)
 [Subsystems] Discovering subsystems at path D:/Unity/6000.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -100,21 +100,21 @@ Initialize mono
 Mono path[0] = 'D:/Unity/6000.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/6000.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/6000.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56404
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/6000.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 [Licensing::Module] Licensing is not yet initialized.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.4+4293ba1
-  Session Id:              c58df4fbb57244cc937d92bf7961ab3e
-  Correlation Id:          36dfd6ad351dae9cebb2e111d197ccfc
-  External correlation Id: 6833257778191946543
+  Session Id:              b4e593b5aa914c8db01c74c19bc091ec
+  Correlation Id:          a7b556cc9d80b48016b8b1fb00e30a1e
+  External correlation Id: 5526729052898801904
   Machine Id:              ojvnM4JRKiRHVOV/FBHPGkjzrm4=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-dell" (connect: 0.00s, validation: 0.00s, handshake: 2.62s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dell-notifications" at "2026-04-06T19:04:46.9411869Z"
-[Licensing::Module] Licensing Background thread has ended after 2.62s
-[Licensing::Module] Licensing is initialized (took 0.90s).
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-dell" (connect: 0.00s, validation: 0.00s, handshake: 2.19s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dell-notifications" at "2026-04-09T07:17:07.476332Z"
+[Licensing::Module] Licensing Background thread has ended after 2.19s
+[Licensing::Module] Licensing is initialized (took 0.68s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 11270640575096-UnityPersXXXX
@@ -122,42 +122,42 @@ Register platform support module: D:/Unity/6000.3.9f1/Editor/Data/PlaybackEngine
   Type: Assigned
   Expiration: Unlimited
 Register platform support module: D:/Unity/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Registered in 0.909877 seconds.
-- Loaded All Assemblies, in  1.786 seconds
+Registered in 0.689157 seconds.
+- Loaded All Assemblies, in  1.444 seconds
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 416 ms
+Android Extension - Scanning For ADB Devices 350 ms
 Native extension for WindowsStandalone target not found
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.504 seconds
-Domain Reload Profiling: 3291ms
-	BeginReloadAssembly (295ms)
+- Finished resetting the current domain, in  1.352 seconds
+Domain Reload Profiling: 2796ms
+	BeginReloadAssembly (236ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (100ms)
-	RebuildNativeTypeToScriptingClass (28ms)
-	initialDomainReloadingComplete (985ms)
-	LoadAllAssembliesAndSetupDomain (378ms)
-		LoadAssemblies (295ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (92ms)
+	RebuildNativeTypeToScriptingClass (36ms)
+	initialDomainReloadingComplete (772ms)
+	LoadAllAssembliesAndSetupDomain (307ms)
+		LoadAssemblies (234ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (368ms)
-			TypeCache.Refresh (364ms)
-				TypeCache.ScanAssembly (334ms)
+		AnalyzeDomain (300ms)
+			TypeCache.Refresh (297ms)
+				TypeCache.ScanAssembly (271ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1505ms)
+	FinalizeReload (1353ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1421ms)
+		SetupLoadedEditorAssemblies (1283ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (622ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (263ms)
-			ProcessInitializeOnLoadAttributes (399ms)
-			ProcessInitializeOnLoadMethodAttributes (129ms)
+			InitializePlatformSupportModulesInManaged (509ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (214ms)
+			ProcessInitializeOnLoadAttributes (409ms)
+			ProcessInitializeOnLoadMethodAttributes (141ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -167,8 +167,8 @@ Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.492 seconds
-Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.569 seconds
+Refreshing native plugins compatible for Editor in 1.39 ms, found 4 plugins.
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
@@ -177,375 +177,296 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.773 seconds
-Domain Reload Profiling: 3263ms
-	BeginReloadAssembly (294ms)
+- Finished resetting the current domain, in  1.336 seconds
+Domain Reload Profiling: 2902ms
+	BeginReloadAssembly (356ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (13ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (65ms)
-	RebuildCommonClasses (61ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (64ms)
-	LoadAllAssembliesAndSetupDomain (1046ms)
-		LoadAssemblies (589ms)
+		CreateAndSetChildDomain (56ms)
+	RebuildCommonClasses (79ms)
+	RebuildNativeTypeToScriptingClass (28ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (1038ms)
+		LoadAssemblies (642ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (598ms)
-			TypeCache.Refresh (428ms)
-				TypeCache.ScanAssembly (390ms)
-			BuildScriptInfoCaches (143ms)
-			ResolveRequiredComponents (20ms)
-	FinalizeReload (1773ms)
+		AnalyzeDomain (597ms)
+			TypeCache.Refresh (447ms)
+				TypeCache.ScanAssembly (409ms)
+			BuildScriptInfoCaches (127ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1336ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1486ms)
+		SetupLoadedEditorAssemblies (1114ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (11ms)
-			BeforeProcessingInitializeOnLoad (363ms)
-			ProcessInitializeOnLoadAttributes (826ms)
-			ProcessInitializeOnLoadMethodAttributes (264ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (306ms)
+			ProcessInitializeOnLoadAttributes (594ms)
+			ProcessInitializeOnLoadMethodAttributes (188ms)
 			AfterProcessingInitializeOnLoad (3ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 2.66 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6927 unused Assets / (4.5 MB). Loaded Objects now: 7763.
-Memory consumption went from 155.6 MB to 151.1 MB.
-Total: 17.485500 ms (FindLiveObjects: 3.088100 ms CreateObjectMapping: 2.951900 ms MarkObjects: 7.859700 ms  DeleteObjects: 3.584600 ms)
+Unloading 6927 unused Assets / (5.0 MB). Loaded Objects now: 7763.
+Memory consumption went from 155.6 MB to 150.6 MB.
+Total: 15.697100 ms (FindLiveObjects: 1.150900 ms CreateObjectMapping: 1.551600 ms MarkObjects: 8.973000 ms  DeleteObjects: 4.020500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 262904.333035 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Damage/LoboSombriuDamage0013.png
-  artifactKey: Guid(1b5cf0ada6e8ded4d9b335455cd301ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Damage/LoboSombriuDamage0013.png using Guid(1b5cf0ada6e8ded4d9b335455cd301ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f09d22c751c2f9a9fcc3d3d55e996f61') in 0.2663396 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0000.png
-  artifactKey: Guid(6b0ba3ef17a62404d985ccc14f6d9c95) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0000.png using Guid(6b0ba3ef17a62404d985ccc14f6d9c95) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b85b57e645c93c2ce00cf66159c65ab9') in 0.0286196 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Animations/Enemy_PlatForm_Idle.anim
-  artifactKey: Guid(e3b6903c37a30c74093b53e22e05002f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Animations/Enemy_PlatForm_Idle.anim using Guid(e3b6903c37a30c74093b53e22e05002f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6e7b2085ba775645dc2865ba53a9fa51') in 0.0383616 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0004.png
-  artifactKey: Guid(423ba7f820a5bf24ab991af0cbf79c00) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0004.png using Guid(423ba7f820a5bf24ab991af0cbf79c00) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '45dd1beac8608f463f0cf7cf76574730') in 0.0251714 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run/LoboSombriuRun0006.png
-  artifactKey: Guid(30d8df1261eef59409dec43964c4feb0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run/LoboSombriuRun0006.png using Guid(30d8df1261eef59409dec43964c4feb0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b53669d275a4e37e554882f155de8b2d') in 0.0300935 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0016.png
-  artifactKey: Guid(433e0818af2f829419a64921b669f091) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0016.png using Guid(433e0818af2f829419a64921b669f091) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'de3421bc3cf832dac1a91f6589bcf556') in 0.0333045 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Scripts/EnemyPatrol.cs
-  artifactKey: Guid(58f9da65834ac6441a878420235b679b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Scripts/EnemyPatrol.cs using Guid(58f9da65834ac6441a878420235b679b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5420de200745b582272b902021329755') in 0.017226 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Death/LoboSombriuDeath0000.png
-  artifactKey: Guid(8be6cddddddadf84880fcefb7dff3973) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Death/LoboSombriuDeath0000.png using Guid(8be6cddddddadf84880fcefb7dff3973) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5a0b29a7eef342dd77f91a96f0846f9b') in 0.0499256 seconds
+  Time since last request: 127087.875490 seconds.
+  path: Assets/Dark_Forest/Sprites/bgrd_tree3.png
+  artifactKey: Guid(9615eb05c38a5024da20b41889bf96d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/bgrd_tree3.png using Guid(9615eb05c38a5024da20b41889bf96d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3f157a068450d0e1eb60b0b31ab5c23b') in 0.3405715 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0008.png
-  artifactKey: Guid(44975d05d903351498d0e666fb026a86) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0008.png using Guid(44975d05d903351498d0e666fb026a86) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3c89229365104ff5ca03a21affe7de37') in 0.0272406 seconds
+  path: Assets/Dark_Forest/Sprites/env_trees.png
+  artifactKey: Guid(c70abfca77f36714b92b411ffbced25c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/env_trees.png using Guid(c70abfca77f36714b92b411ffbced25c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2ad67a81e43b3e08f75b4237976081d5') in 0.035757 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Animations/DarkWolf_2d_Walk Animation.anim
-  artifactKey: Guid(a166bedd637c37f49933679bf6063bce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Animations/DarkWolf_2d_Walk Animation.anim using Guid(a166bedd637c37f49933679bf6063bce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b72d54b425c95f0b539de9e3968854e2') in 0.0266276 seconds
+  Time since last request: 0.000028 seconds.
+  path: Assets/Dark_Forest/about.txt
+  artifactKey: Guid(77a9649822eb5364ca5458cbe69c7359) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/about.txt using Guid(77a9649822eb5364ca5458cbe69c7359) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b05864243baf6e6fb94f83260c62db87') in 0.0509359 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Dark_Forest/Scene
+  artifactKey: Guid(335352e714f06b546abe656e7232e6ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Scene using Guid(335352e714f06b546abe656e7232e6ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '60413fd936eafde5222ec95444705baa') in 0.0102723 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Animations/TreeIdle.anim
+  artifactKey: Guid(5153c3a0627f2894582d3bd3e32e633e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Animations/TreeIdle.anim using Guid(5153c3a0627f2894582d3bd3e32e633e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2b0f02a97b4917003426938b6910ed0e') in 0.1848991 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced
+  artifactKey: Guid(b0cc024f97bc52c439f6d01fd30ebef9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/Sliced using Guid(b0cc024f97bc52c439f6d01fd30ebef9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '44569645c3275dddf0d45f87ebcc6e94') in 0.0098431 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Dark_Forest/Sprites/env_ground.png
+  artifactKey: Guid(532d89cce32ef33469a10c43c44556ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/env_ground.png using Guid(532d89cce32ef33469a10c43c44556ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c0affaebc553c4c1bc9461e0ad2875d8') in 0.0434241 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites
-  artifactKey: Guid(0e54e23034889f748983bc6673feefe4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites using Guid(0e54e23034889f748983bc6673feefe4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'dbb24b832f5ae7cd403d048254b3ea35') in 0.0150632 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Walk/LoboSombriuWalk0000.png
-  artifactKey: Guid(98db5d9cd0b73b540a2300164d5d01ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Walk/LoboSombriuWalk0000.png using Guid(98db5d9cd0b73b540a2300164d5d01ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1c6839e929a451d39f0742fb5aeca49a') in 0.0306439 seconds
+  path: Assets/Dark_Forest/Sprites/Sliced/bgrd_tree4.png
+  artifactKey: Guid(140d47a4d8b5a574594d83b98684c917) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/Sliced/bgrd_tree4.png using Guid(140d47a4d8b5a574594d83b98684c917) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '08fa85caf37ea0abba9ae6d758dab84c') in 0.0387648 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run/LoboSombriuRun0016.png
-  artifactKey: Guid(01ade96415f408840ae74c0bddbfaad6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run/LoboSombriuRun0016.png using Guid(01ade96415f408840ae74c0bddbfaad6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '99a3462aeb34f5f0957be77029e37a87') in 0.0283681 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0010.png
-  artifactKey: Guid(19812a6af0744b44593a1a00ac72d804) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0010.png using Guid(19812a6af0744b44593a1a00ac72d804) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd58e4e60f9eea6d800ec3946e9ba0c48') in 0.0260614 seconds
+  Time since last request: 0.000016 seconds.
+  path: Assets/Dark_Forest/Sprites/env_mon.png
+  artifactKey: Guid(6a23b508abd49df48b72ee49cd47bf8a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/env_mon.png using Guid(6a23b508abd49df48b72ee49cd47bf8a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4b637e4244e21742150fe5cd7562b243') in 0.0501765 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000022 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run
-  artifactKey: Guid(876596cedf3585647ae8c94e0ddb8840) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run using Guid(876596cedf3585647ae8c94e0ddb8840) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0958624f201b63aff4b399e0ae3a42da') in 0.0143842 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0000.png
-  artifactKey: Guid(7bb1c18ced1d17248918daae7a0175d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0000.png using Guid(7bb1c18ced1d17248918daae7a0175d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6666c5472206b831360874d8404637b0') in 0.0391987 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0004.png
-  artifactKey: Guid(3526c33af5b23944eb9c3e46d4608515) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0004.png using Guid(3526c33af5b23944eb9c3e46d4608515) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f368528191c39726ad95df143937eea7') in 0.0330809 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Demo/DemoScene.unity
-  artifactKey: Guid(0b89beba6bf8880409f6094d4d40cfd2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Demo/DemoScene.unity using Guid(0b89beba6bf8880409f6094d4d40cfd2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '14b1371f29520d626dd9675c67651081') in 0.019095 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0006.png
-  artifactKey: Guid(4adbab8db86254c459743bbd7ab9f047) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Idlle/LoboSombriuIdlle0006.png using Guid(4adbab8db86254c459743bbd7ab9f047) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd776a4cd51dec9d0af2f1be194098799') in 0.0256612 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Animations/DarkWolf_2d_Damage Animation.anim
-  artifactKey: Guid(49441429b8a3da148b0fcbf68e620cef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Animations/DarkWolf_2d_Damage Animation.anim using Guid(49441429b8a3da148b0fcbf68e620cef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6866e20442bacfbccf150778a1e7cc0c') in 0.0171939 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Death/LoboSombriuDeath0006.png
-  artifactKey: Guid(14a83dbd854eabd4b992e54752a8e6ef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Death/LoboSombriuDeath0006.png using Guid(14a83dbd854eabd4b992e54752a8e6ef) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '807ce15a1da216fc6d661ffead09b33c') in 0.0285841 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack
-  artifactKey: Guid(bfa0b74d4a4a6d740b139bebe7a9fd32) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack using Guid(bfa0b74d4a4a6d740b139bebe7a9fd32) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '12a4129903b9f2d627f3c4c5c7828837') in 0.0149595 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0014.png
-  artifactKey: Guid(6b7d21ca2b417574aa89625f9ca252cc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0014.png using Guid(6b7d21ca2b417574aa89625f9ca252cc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '83368eeeab12214311536aea5d90eb7d') in 0.0338213 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000072 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Damage/LoboSombriuDamage0002.png
-  artifactKey: Guid(67473cb35d757e2458d47f0c3adbe7d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Damage/LoboSombriuDamage0002.png using Guid(67473cb35d757e2458d47f0c3adbe7d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5298f68782b1f17f7a77a348b2dc0bb1') in 0.0311558 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Damage/LoboSombriuDamage0014.png
-  artifactKey: Guid(7439fe74a59f33b42940e6193302110b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Damage/LoboSombriuDamage0014.png using Guid(7439fe74a59f33b42940e6193302110b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '469bd3543fb25f69ba77b108f597d789') in 0.0342465 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run/LoboSombriuRun0000.png
-  artifactKey: Guid(c056abf8b942630419d25c6c421f1537) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Run/LoboSombriuRun0000.png using Guid(c056abf8b942630419d25c6c421f1537) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '72aebf173face3dd53d0f0e36bd62c7e') in 0.0291779 seconds
+  path: Assets/Dark_Forest/Sprites/Sliced/bgrd_tree3.png
+  artifactKey: Guid(6e8cfb191ced1eb40a94d29f632f952a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/Sliced/bgrd_tree3.png using Guid(6e8cfb191ced1eb40a94d29f632f952a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ad0f583dfec006b8d30df7c673f9cffb') in 0.019296 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000026 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0012.png
-  artifactKey: Guid(607d7be39970d2f44b544b92140bffc1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Attack/LoboSombriuAttack0012.png using Guid(607d7be39970d2f44b544b92140bffc1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9ca5882a22036f08cdf5c820aa080062') in 0.0354157 seconds
+  path: Assets/Dark_Forest/Sprites/env_rock.png
+  artifactKey: Guid(93c7f893ffffbec45b617e1c3e375f94) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/env_rock.png using Guid(93c7f893ffffbec45b617e1c3e375f94) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cdae0d9787bc4a21f8d9f9a125cb084f') in 0.0326398 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Walk/LoboSombriuWalk0002.png
-  artifactKey: Guid(b5b49ac3fc10c5543a77e3b9f05f04c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/MMDevelopers/DarkWolf_2d/Art/Sprites/Walk/LoboSombriuWalk0002.png using Guid(b5b49ac3fc10c5543a77e3b9f05f04c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6798cf66d4c7bf56e1cba7f7afae7a12') in 0.0310819 seconds
+  Time since last request: 0.000018 seconds.
+  path: Assets/Dark_Forest/Sprites/decorative_obj.png
+  artifactKey: Guid(120d8d95c9fd212499279a73119505aa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/decorative_obj.png using Guid(120d8d95c9fd212499279a73119505aa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '11c8b586014c92cd16407711586cdda0') in 0.0583942 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.403 seconds
-Refreshing native plugins compatible for Editor in 1.58 ms, found 4 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.455 seconds
-Domain Reload Profiling: 2862ms
-	BeginReloadAssembly (444ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (23ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (116ms)
-	RebuildCommonClasses (58ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (844ms)
-		LoadAssemblies (656ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (398ms)
-			TypeCache.Refresh (17ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (356ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1456ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1161ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (285ms)
-			ProcessInitializeOnLoadAttributes (671ms)
-			ProcessInitializeOnLoadMethodAttributes (178ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (36ms)
-Refreshing native plugins compatible for Editor in 2.39 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6925 unused Assets / (5.3 MB). Loaded Objects now: 7769.
-Memory consumption went from 157.2 MB to 151.9 MB.
-Total: 33.288700 ms (FindLiveObjects: 1.526300 ms CreateObjectMapping: 4.243400 ms MarkObjects: 20.623200 ms  DeleteObjects: 6.892600 ms)
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Dark_Forest/Sprites
+  artifactKey: Guid(53b18ec03c58d014facad036cb3af20b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites using Guid(53b18ec03c58d014facad036cb3af20b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '1703f8958003d96d0ffb116de64dede3') in 0.0117142 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-- Loaded All Assemblies, in  1.166 seconds
-Refreshing native plugins compatible for Editor in 1.55 ms, found 4 plugins.
-Native extension for Android target not found
-Native extension for WindowsStandalone target not found
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.573 seconds
-Domain Reload Profiling: 2742ms
-	BeginReloadAssembly (342ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (30ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (85ms)
-	RebuildCommonClasses (63ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (701ms)
-		LoadAssemblies (489ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (354ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (317ms)
-			ResolveRequiredComponents (17ms)
-	FinalizeReload (1574ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1266ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (248ms)
-			ProcessInitializeOnLoadAttributes (829ms)
-			ProcessInitializeOnLoadMethodAttributes (166ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (35ms)
-Refreshing native plugins compatible for Editor in 4.91 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6925 unused Assets / (4.1 MB). Loaded Objects now: 7772.
-Memory consumption went from 157.2 MB to 153.1 MB.
-Total: 28.483000 ms (FindLiveObjects: 3.171900 ms CreateObjectMapping: 2.995700 ms MarkObjects: 16.056400 ms  DeleteObjects: 6.255400 ms)
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/tronchungo3.png
+  artifactKey: Guid(be5d337a3f94c7348a4c305a5d068535) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Sprites/tronchungo3.png using Guid(be5d337a3f94c7348a4c305a5d068535) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fe164bc6199224c8879af75d51f466c2') in 0.0704357 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 46
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced/top_far_bgrnd.png
+  artifactKey: Guid(93f45b0e21c63554785c8f7890cc8e23) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/Sliced/top_far_bgrnd.png using Guid(93f45b0e21c63554785c8f7890cc8e23) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7be5dc1332593c44606a6378261186c0') in 2.224096 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1784
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.632786 seconds.
+  path: Assets/Dark_Forest
+  artifactKey: Guid(9a039f8df489fe146af95df33263a40a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest using Guid(9a039f8df489fe146af95df33263a40a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9cdb4e609a093ef90f9e6cb221eabcc') in 0.000528 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.621108 seconds.
+  path: Assets/Dark_Forest/Sprites
+  artifactKey: Guid(53b18ec03c58d014facad036cb3af20b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites using Guid(53b18ec03c58d014facad036cb3af20b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17699a77a35e45074d466436e45e2f34') in 0.0005443 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020171 seconds.
+  path: Assets/Dark_Forest/Sprites/bgrd_tree1.png
+  artifactKey: Guid(de3df8bfabc7d93479736fa4c153cb5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/bgrd_tree1.png using Guid(de3df8bfabc7d93479736fa4c153cb5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8812e3c06f3b63766431c0faff731e82') in 0.1062589 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Dark_Forest/Sprites/env_mon.png
+  artifactKey: Guid(6a23b508abd49df48b72ee49cd47bf8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/env_mon.png using Guid(6a23b508abd49df48b72ee49cd47bf8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '189b8e58a649aea0c2182ef7a2c790ef') in 0.0233505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Dark_Forest/Sprites/bgrd_tree4.png
+  artifactKey: Guid(3b5a750494478e543be641d3aed3b6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/bgrd_tree4.png using Guid(3b5a750494478e543be641d3aed3b6fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9496d43b40f0105a1a3d978110ccc58d') in 0.0173951 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Dark_Forest/Sprites/env_rock.png
+  artifactKey: Guid(93c7f893ffffbec45b617e1c3e375f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/env_rock.png using Guid(93c7f893ffffbec45b617e1c3e375f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ba3939e521e56efff105307035bb5ee6') in 0.0219168 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Dark_Forest/Sprites/top_far_bgrnd.png
+  artifactKey: Guid(550e91c594125c5409bd8646924ced15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/top_far_bgrnd.png using Guid(550e91c594125c5409bd8646924ced15) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd85743eef16ba45c65459ccd9f95decc') in 0.0234423 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.469651 seconds.
+  path: Assets/Dark_Forest/Scene
+  artifactKey: Guid(335352e714f06b546abe656e7232e6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Scene using Guid(335352e714f06b546abe656e7232e6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '636d5dffbaaa86f69a3067330f0821f3') in 0.0004858 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1732.182802 seconds.
+  path: Assets/Dark_Forest/Sprites/env_ground.png
+  artifactKey: Guid(532d89cce32ef33469a10c43c44556ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/env_ground.png using Guid(532d89cce32ef33469a10c43c44556ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f73dae4af454ff23b1bc96d3145d587c') in 0.0312195 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012415 seconds.
+  path: Assets/Dark_Forest/Sprites/env_ground.png
+  artifactKey: Guid(532d89cce32ef33469a10c43c44556ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Dark_Forest/Sprites/env_ground.png using Guid(532d89cce32ef33469a10c43c44556ea) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '592b20d097c99bc96b9d2c57c975a1c9') in 0.0143236 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.698069 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced
+  artifactKey: Guid(b0cc024f97bc52c439f6d01fd30ebef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/Sliced using Guid(b0cc024f97bc52c439f6d01fd30ebef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b7efb70e5df62a1b1529ad74b1c6d09') in 0.0008576 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.427313 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced/bgrd_tree1.png
+  artifactKey: Guid(59c40e9bf99ef3b478c974531f9e6d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/Sliced/bgrd_tree1.png using Guid(59c40e9bf99ef3b478c974531f9e6d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4c62c2390531297930ee1072d621b167') in 0.017193 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019047 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced/bgrd_tree5.png
+  artifactKey: Guid(0903063eee308ef479c7bac18f4f4e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/Sliced/bgrd_tree5.png using Guid(0903063eee308ef479c7bac18f4f4e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c80a72a3ca24b1e8f88ca65f6dc10972') in 0.0159899 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced/castle_env.png
+  artifactKey: Guid(f92108e62af6ac444980a5f1a0acb5b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/Sliced/castle_env.png using Guid(f92108e62af6ac444980a5f1a0acb5b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '555121cd9356436bb195f863f4a05464') in 2.8037557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1515
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced/env_trees.png
+  artifactKey: Guid(a86ab2c3b362abd4bb90af1bb44aff3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/Sliced/env_trees.png using Guid(a86ab2c3b362abd4bb90af1bb44aff3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cecc4190270c95f67c9a97ca3c8d0c4a') in 1.5546608 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 780
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Dark_Forest/Sprites/Sliced/env_rock.png
+  artifactKey: Guid(94e976c5e86253f4cbc972a61fc6a87d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dark_Forest/Sprites/Sliced/env_rock.png using Guid(94e976c5e86253f4cbc972a61fc6a87d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '861fbef808b1acdccbf0d3b6beb0b856') in 1.4918148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 729
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
