@@ -61,11 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\HeartsUI.cs" />
+    <Compile Include="Assets\Scripts\ArenaWaveManager.cs" />
     <Compile Include="Assets\Scripts\MobileButton.cs" />
     <Compile Include="Assets\Scripts\EnemySoundEmitter.cs" />
     <Compile Include="Assets\Scripts\HealthUI.cs" />
     <Compile Include="Assets\Scripts\DeathZone.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\BatChase.cs" />
     <Compile Include="Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

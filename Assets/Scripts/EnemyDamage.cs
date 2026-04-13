@@ -6,6 +6,9 @@ public class EnemyDamage : MonoBehaviour
     public float attackCooldown = 1f;
     public float attackRange = 1.2f;
 
+    [Header("Bat / Simple Enemy Support")]
+    public bool useSimpleDistanceAttack = false;
+
     private float cooldownTimer = 0f;
     private Transform player;
     private EnemyPatrol enemyPatrol;
@@ -32,17 +35,27 @@ public class EnemyDamage : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (enemyPatrol != null && enemyPatrol.IsAttacking() && distance <= attackRange)
-        {
-            if (cooldownTimer <= 0f)
-            {
-                PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+        bool canAttack = false;
 
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damageAmount, transform.position);
-                    cooldownTimer = attackCooldown;
-                }
+        // For bats or simple flying enemies
+        if (useSimpleDistanceAttack)
+        {
+            canAttack = distance <= attackRange;
+        }
+        // For patrol/chase enemies like wolf/tree
+        else if (enemyPatrol != null && enemyPatrol.IsAttacking() && distance <= attackRange)
+        {
+            canAttack = true;
+        }
+
+        if (canAttack && cooldownTimer <= 0f)
+        {
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount, transform.position);
+                cooldownTimer = attackCooldown;
             }
         }
     }
