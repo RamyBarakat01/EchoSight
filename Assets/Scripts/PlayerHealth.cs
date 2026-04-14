@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,30 +6,13 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     public float invincibilityDuration = 1f;
 
-    [Header("Hit Feedback")]
-    public float flashDuration = 0.15f;
-    public float knockbackForce = 6f;
-    public float movementLockDuration = 0.15f;
-
     private int currentHealth;
     private bool isInvincible = false;
     private float invincibilityTimer = 0f;
 
-    private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rb;
-    private PlayerMovement playerMovement;
-    private Color originalColor;
-
     void Start()
     {
         currentHealth = maxHealth;
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-        playerMovement = GetComponent<PlayerMovement>();
-
-        if (spriteRenderer != null)
-            originalColor = spriteRenderer.color;
     }
 
     void Update()
@@ -47,9 +28,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, Vector2 hitSourcePosition)
+    public void TakeDamage(int damage)
     {
-        if (isInvincible)
+        if (isInvincible || (GameManager.Instance != null && GameManager.Instance.gameEnded))
             return;
 
         currentHealth -= damage;
@@ -58,12 +39,38 @@ public class PlayerHealth : MonoBehaviour
         isInvincible = true;
         invincibilityTimer = invincibilityDuration;
 
-        StartCoroutine(FlashRed());
-        ApplyKnockback(hitSourcePosition);
-
-        if (playerMovement != null)
+        if (currentHealth <= 0)
         {
-            playerMovement.DisableMovementTemporarily(movementLockDuration);
+            Die();
+        }
+    }
+
+    public void TakeDamage(int damage, Vector2 enemyPosition)
+    {
+        if (isInvincible || (GameManager.Instance != null && GameManager.Instance.gameEnded))
+            return;
+
+        currentHealth -= damage;
+        Debug.Log("Player took damage! Current HP: " + currentHealth);
+
+        isInvincible = true;
+        invincibilityTimer = invincibilityDuration;
+
+        // Knockback
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        PlayerMovement movement = GetComponent<PlayerMovement>();
+
+        if (rb != null)
+        {
+            Vector2 knockDirection = ((Vector2)transform.position - enemyPosition).normalized;
+            knockDirection.y = 0.5f;
+            rb.linearVelocity = Vector2.zero;
+            rb.AddForce(knockDirection * 6f, ForceMode2D.Impulse);
+        }
+
+        if (movement != null)
+        {
+            movement.DisableMovementTemporarily(0.2f);
         }
 
         if (currentHealth <= 0)
@@ -72,24 +79,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    IEnumerator FlashRed()
+    void Die()
     {
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(flashDuration);
-            spriteRenderer.color = originalColor;
-        }
-    }
+        Debug.Log("Player died!");
 
-    void ApplyKnockback(Vector2 hitSourcePosition)
-    {
-        if (rb != null)
+        if (GameManager.Instance != null)
         {
-            Vector2 direction = ((Vector2)transform.position - hitSourcePosition).normalized;
-
-            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
-            rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+            GameManager.Instance.PlayerDied();
         }
     }
 
@@ -98,15 +94,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += amount;
 
         if (currentHealth > maxHealth)
+        {
             currentHealth = maxHealth;
+        }
 
         Debug.Log("Player healed! Current HP: " + currentHealth);
-    }
-
-    void Die()
-    {
-        Debug.Log("Player died!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public int GetCurrentHealth()

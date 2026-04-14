@@ -35,19 +35,16 @@ public class ArenaWaveManager : MonoBehaviour
 
     IEnumerator StartWaves()
     {
-        // Wave 1
         yield return StartCoroutine(SpawnWave(wave1Count));
         yield return StartCoroutine(WaitUntilWaveCleared());
 
         yield return new WaitForSeconds(timeBetweenWaves);
 
-        // Wave 2
         yield return StartCoroutine(SpawnWave(wave2Count));
         yield return StartCoroutine(WaitUntilWaveCleared());
 
         yield return new WaitForSeconds(timeBetweenWaves);
 
-        // Wave 3
         yield return StartCoroutine(SpawnWave(wave3Count));
         yield return StartCoroutine(WaitUntilWaveCleared());
 
@@ -79,7 +76,6 @@ public class ArenaWaveManager : MonoBehaviour
     {
         while (true)
         {
-            // Remove destroyed bats from the list
             aliveBats.RemoveAll(bat => bat == null);
 
             if (aliveBats.Count == 0)
@@ -87,6 +83,11 @@ public class ArenaWaveManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public int GetTotalPlannedEnemies()
+    {
+        return wave1Count + wave2Count + wave3Count;
     }
 
     public bool IsFightFinished()

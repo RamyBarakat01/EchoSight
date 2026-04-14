@@ -10,6 +10,9 @@ public class EnemyHealth : MonoBehaviour
     public float flashDuration = 0.15f;
     public float knockbackForce = 4f;
 
+    [Header("Score")]
+    public int scoreValue = 100;
+
     private int currentHealth;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
@@ -80,6 +83,11 @@ public class EnemyHealth : MonoBehaviour
             {
                 playerHealth.Heal(1);
             }
+        }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.EnemyDefeated(scoreValue);
         }
 
         Destroy(gameObject);
