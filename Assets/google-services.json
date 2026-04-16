@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "589077777265",
+    "firebase_url": "https://echosight-6d3ce-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "echosight-6d3ce",
+    "storage_bucket": "echosight-6d3ce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589077777265:android:85da12aa17487a948bc4d0",
+        "android_client_info": {
+          "package_name": "com.EchoSight.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMWr4iGBh6Ug0oLxDHMhY0oNnUXIzRuz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

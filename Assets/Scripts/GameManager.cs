@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         timerRunning = false;
 
         int timeBonus = 0;
-        finalScore = killScore + timeBonus;
+        finalScore = killScore;
 
         Debug.Log("GAME OVER!");
         Debug.Log("Time: " + elapsedTime.ToString("F2") + " seconds");
@@ -121,5 +121,15 @@ public class GameManager : MonoBehaviour
     public int GetFinalScore()
     {
         return finalScore;
+    }
+
+    public int GetEnemiesKilled()
+    {
+        return totalEnemies - enemiesRemaining;
+    }
+
+    public int GetTotalEnemies()
+    {
+        return totalEnemies;
     }
 }
