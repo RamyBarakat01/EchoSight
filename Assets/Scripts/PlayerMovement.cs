@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject attackPulsePrefab;
     public AudioClip attackSound;
 
+    [Header("Footsteps")]
+    public AudioClip footstepSound;
+    public float footstepInterval = 0.35f;
+    public float footstepVolume = 0.45f;
+
     [Header("Dash")]
     public float dashSpeed = 12f;
     public float dashDuration = 0.15f;
@@ -49,12 +54,21 @@ public class PlayerMovement : MonoBehaviour
     private float dashCooldownTimer = 0f;
     private int dashDirection = 1;
 
+    private float footstepTimer = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+
+        if (audioSource != null)
+        {
+            audioSource.playOnAwake = false;
+            audioSource.loop = false;
+            audioSource.spatialBlend = 0f;
+        }
     }
 
     void Update()
@@ -72,6 +86,8 @@ public class PlayerMovement : MonoBehaviour
         {
             dashCooldownTimer -= Time.deltaTime;
         }
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (isDashing)
         {
@@ -108,8 +124,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
         }
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (isGrounded)
         {
@@ -150,6 +164,8 @@ public class PlayerMovement : MonoBehaviour
             Attack();
         }
 
+        HandleFootsteps(moveInput);
+
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetBool("IsGrounded", isGrounded);
 
@@ -175,6 +191,31 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void HandleFootsteps(float moveInput)
+    {
+        bool isMovingHorizontally = Mathf.Abs(moveInput) > 0.1f;
+        bool shouldPlayFootsteps = canMove && isGrounded && !isDashing && isMovingHorizontally;
+
+        if (!shouldPlayFootsteps)
+        {
+            footstepTimer = 0f;
+            return;
+        }
+
+        footstepTimer -= Time.deltaTime;
+
+        if (footstepTimer <= 0f)
+        {
+            if (footstepSound != null && audioSource != null)
+            {
+                audioSource.pitch = Random.Range(0.95f, 1.05f);
+                audioSource.PlayOneShot(footstepSound, footstepVolume);
+            }
+
+            footstepTimer = footstepInterval;
+        }
+    }
+
     void StartDash()
     {
         isDashing = true;
@@ -189,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        if (attackSound != null)
+        if (attackSound != null && audioSource != null)
         {
             audioSource.pitch = Random.Range(0.95f, 1.05f);
             audioSource.PlayOneShot(attackSound);
